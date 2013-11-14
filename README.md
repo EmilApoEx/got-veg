@@ -8,13 +8,11 @@ This application was generated with the "rails_apps_composer":https://github.com
 
 # Setup:
 Please run
-<pre><code>
-$ bundle install
+<pre><code>$ bundle install
 $ rake db:migrate
 </code></pre>
 To generate a data-set for getting started, please run
-<code><pre>
-> require './mkDBbase'
+<pre><code>> require './mkDBbase'
 </code></pre>
 in the rails console
 
