@@ -1,9 +1,9 @@
-<%= form_for(@food_amount, :url => update_amount_path , :remote => true) do |f| %>
-  <div class="field"></div>
+<%= form_for(@food_amount, :url => update_amount_path, :html => {:method => :put}) do |f| %>
+  <div class="field">
     <%= f.label :quantity %>
     <%= f.number_field :quantity %>
   </div>
-  <div class="field"></div>
+  <div class="field">
     <%= f.label :food_id %>
     <%= f.select(:food_id, Food.all.collect{|f| [f.name, f.id]})%>
   </div>

@@ -1,0 +1,25 @@
+<%= form_for(@food, :url => create_food_path) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :unit %><br>
+    <%= f.text_field :unit %>
+  </div>
+  <br>
+  <%= f.fields_for :gurus, @gurus do |guru_field| %>
+    <%= guru_field.hidden_field :id %>
+    <%= guru_field.fields_for :grades do |color_field| %>
+      <div class="field">
+        <%= color_field.label :"#{guru_field.object.name}" %><br>
+        <%= color_field.select(:color, ["green", "yellow", "red"]) %>
+      </div>
+    <% end %>
+  <% end %>
+  <br>
+  <br>
+  <%= f.submit 'Create new food record' %>
+<% end %>
+
+

@@ -12,7 +12,7 @@
   <tbody>
     <% @gurus.each do |guru| %>
       <tr>
-        <td><%= guru.name %></td>
+        <td><%= image_tag(guru.picture_url, :size => "160x100") %></td>
         <td><%= guru.score %></td>
       </tr>
     <% end %>

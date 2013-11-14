@@ -11,6 +11,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', '>= 3.0.0.0'
 gem 'figaro'
 gem 'simple_form'
+gem 'debugger' 
+#gem 'googlecharts' 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
