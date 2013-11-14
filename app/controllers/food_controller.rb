@@ -5,16 +5,17 @@ class FoodController < ApplicationController
   end
 
   def create
-    debugger
     
     food = Food.new(:name => params[:food][:name],
                     :unit => params[:food][:unit])
     food.save
+    food_amount = FoodAmount.new(:food => food)
+    food_amount.save
 
-    params[:food][:gurus_attributes].each do |index, guru|
-      grade = Grade.new(food: food, 
-                        guru: Guru.find(guru[:id].to_i), 
-                        color: guru[:color])
+    params[:food][:gurus_attributes].each do |key, guru|
+      grade = Grade.new(:food  => food, 
+                        :guru  => Guru.find(guru[:id].to_i), 
+                        :color => guru[:grades][:color])
       grade.save
     end
     
