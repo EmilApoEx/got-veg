@@ -1,0 +1,13 @@
+<%= form_for(@food_amount, :url => update_amount_path , :remote => true) do |f| %>
+  <div class="field"></div>
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field"></div>
+    <%= f.label :food_id %>
+    <%= f.select(:food_id, Food.all.collect{|f| [f.name, f.id]})%>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Update intake' %>
+  </div>
+<% end %>

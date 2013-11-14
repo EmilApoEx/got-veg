@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Unit</th>
+      <th>Quantity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @food_amounts.each do |food_amount| %>
+      <tr>
+        <td><%= food_amount.food.name %></td>
+        <td><%= food_amount.food.unit %></td>
+        <td><%= food_amount.quantity %></td>
+      </tr>
+    <% end %>
+  </tbody> 
+</table>
+

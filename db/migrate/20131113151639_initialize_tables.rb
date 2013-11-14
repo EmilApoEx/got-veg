@@ -14,7 +14,7 @@ class InitializeTables < ActiveRecord::Migration
       t.string :unit, :null => false
     end
     create_table :food_amounts do |t|
-      t.float   :quantity, :null => false, :default => false 
+      t.float   :quantity, :null => false, :default => 0
       t.integer :food_id,  :null => false
       t.timestamps
     end

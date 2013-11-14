@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Guru</th>
+      <th>Score</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gurus.each do |guru| %>
+      <tr>
+        <td><%= guru.name %></td>
+        <td><%= guru.score %></td>
+      </tr>
+    <% end %>
+  </tbody> 
+</table>
+
+
